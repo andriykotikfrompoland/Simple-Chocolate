@@ -15,57 +15,87 @@
       href="./images/icons/illustration.svg"
       type="image/xml+svg"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Fonts -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Normalize CSS -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/3.0.1/normalize.min.css"
+      integrity="sha512-6vVDKjypi9edZc0plLTyYuWSM6E+oQCH9cJbsaKFvsajojwPjgqutD5mypLKUalFKV7blxIwqTNAxD2CW1XiNw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./css/main.css" />
   </head>
   <body>
     <!-- Header -->
-    <header id="home">
-      <a href="index.html">
-        Simple Chocolate
+    <header class="header" id="home">
+      <a class="logo" href="index.html">
+        <i>SIMPLY</i> CHOCOLATE
         <img
+          class="logo-icon"
           src="./images/icons/illustration.svg"
           alt="Simple Chocolate Logo"
           width="24"
           height="24"
         />
       </a>
-      <nav>
-        <ul>
-          <li><a href="#home">Home</a></li>
-          <li><a href="#made">How it’s made?</a></li>
-          <li><a href="#reviews">Chocolate is loved</a></li>
+      <nav class="main-nav">
+        <ul class="main-nav-list">
+          <li class="main-nav-item">
+            <a class="main-nav-link" href="#home">Home</a>
+          </li>
+          <li class="main-nav-item">
+            <a class="main-nav-link" href="#made">How it’s made?</a>
+          </li>
+          <li class="main-nav-item">
+            <a class="main-nav-link" href="#reviews">Chocolate is loved</a>
+          </li>
         </ul>
       </nav>
-      <ul>
-        <li>
+      <ul class="social">
+        <li class="social-item">
           <a
+            class="social-link"
             href="https://www.facebook.com"
             target="_blank"
             rel="noopener noreferrer"
             ><img
+              class="social-icon"
               src="./images/icons/facebook.svg"
               alt="Facebook icon"
               width="24"
               height="24"
           /></a>
         </li>
-        <li>
+        <li class="social-item">
           <a
+            class="social-link"
             href="https://www.instagram.com"
             target="_blank"
             rel="noopener noreferrer"
             ><img
+              class="social-icon"
               src="./images/icons/instagram.svg"
               alt="Instagram icon"
               width="24"
               height="24"
           /></a>
         </li>
-        <li>
+        <li class="social-item">
           <a
+            class="social-link"
             href="https://www.twitter.com"
             target="_blank"
             rel="noopener noreferrer"
             ><img
+              class="social-icon"
               src="./images/icons/twitter.svg"
               alt="Twitter icon"
               width="24"
@@ -77,15 +107,18 @@
     <!-- Main -->
     <main id="main">
       <!-- Hero section-->
-      <section id="hero">
-        <h1>
+      <section class="hero" id="hero">
+        <h1 class="hero-title">
           Treat yourself or a loved one to our finest ingredients for a moment
           of pure delight!
         </h1>
-        <button type="button">Buy now</button>
-        <button type="button">How it&#39;s made</button>
-        <a href="#benefits"
+        <button class="btn btn-filled" type="button">Buy now</button>
+        <button class="btn btn-outlined primary" type="button">
+          How it&#39;s made
+        </button>
+        <a class="hero-link" href="#benefits"
           >scroll down<img
+            class="hero-link-icon"
             src="./images/icons/wrapper.svg"
             alt="Arrow down icon"
             width="22"
@@ -93,21 +126,21 @@
         /></a>
       </section>
       <!-- Benefits section-->
-      <section id="benefits">
+      <section class="benefits" id="benefits">
         <h2>Benefits of our chocolate</h2>
-        <ul>
-          <li>
-            <h3>Unsurpassed taste</h3>
-            <p>
+        <ul class="benefits-list">
+          <li class="benefits-item">
+            <h3 class="benefits-subtitle">Unsurpassed taste</h3>
+            <p class="benefits-desc">
               Crafted with the finest quality cocoa beans and a dedication to
               perfection, each bite is a decadent experience that simply cannot
               be matched. Savor the richness and complexity of our Unsurpassed
               Taste and discover a new level of chocolate bliss.
             </p>
           </li>
-          <li>
-            <h3>Affordable price</h3>
-            <p>
+          <li class="benefits-item">
+            <h3 class="benefits-subtitle">Affordable price</h3>
+            <p class="benefits-desc">
               Indulge in high-quality chocolate without breaking the bank with
               Simply Chocolate's selection of affordable treats. Enjoy
               mouth-watering truffles and velvety chocolate bars without
@@ -115,9 +148,9 @@
               affordable luxury today.
             </p>
           </li>
-          <li>
-            <h3>Own production</h3>
-            <p>
+          <li class="benefits-item">
+            <h3 class="benefits-subtitle">Own production</h3>
+            <p class="benefits-desc">
               We take pride in our own production process, ensuring that every
               step is carefully crafted to perfection. From selecting the finest
               ingredients to handcrafting each piece, our attention to detail is
@@ -399,7 +432,9 @@
             </p>
           </li>
         </ul>
-        <button type="button">Leave a review</button>
+        <button class="btn btn-outlined secondary" type="button">
+          Leave a review
+        </button>
       </section>
     </main>
     <!-- Footer -->

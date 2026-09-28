@@ -1,19 +1,43 @@
 .ingredients {
-  padding-top: 120px;
+  padding-top: 80px;
 }
-.ingredients-title {
+@media only screen and (min-width: 768px) {
+  .ingredients {
+    padding-top: 100px;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .ingredients {
+    padding-top: 120px;
+  }
 }
 .ingredients-list {
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
   gap: 32px;
+}
+@media only screen and (min-width: 768px) {
+  .ingredients-list {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
 }
 .ingredients-item {
   position: relative;
-  width: calc((100% - 32px * 3) / 4);
+  padding: 32px 28px 28px;
 
   border-radius: 15px;
-  padding: 28px 24px;
+}
+@media only screen and (min-width: 768px) {
+  .ingredients-item {
+    width: calc((100% - 32px * 1) / 2);
+  }
+}
+@media only screen and (min-width: 1168px) {
+  .ingredients-item {
+    width: calc((100% - 32px * 3) / 4);
+    padding: 28px 24px;
+  }
 }
 /* a * n + b */
 .ingredients-item:nth-child(2n) {
@@ -27,6 +51,12 @@
 .ingredients-item:nth-child(4n + 3) {
   background: #1e1823;
   color: #fff;
+}
+/* Прибираємо останні 3 картки */
+@media only screen and (max-width: 767.98px) {
+  .ingredients-item:nth-last-child(-n + 3) {
+    display: none;
+  }
 }
 .ingredients-btn {
   display: flex;
@@ -48,7 +78,14 @@
   color: #fafafa;
 }
 .ingredients-ill {
-  margin-bottom: 36px;
+  margin: 0 auto 16px;
+}
+@media only screen and (min-width: 1168px) {
+  .ingredients-ill {
+    margin: 0 auto 36px;
+    width: 212px;
+    height: 160px;
+  }
 }
 .ingredients-caption {
   font-size: inherit;

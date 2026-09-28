@@ -1,18 +1,34 @@
-.bestsellers {
-}
-.bestsellers-title {
-}
 .bestsellers-list {
   display: flex;
   flex-wrap: wrap;
   gap: 16px;
 }
 .bestsellers-item {
-  width: calc((100% - 16px * 2) / 3);
   border-radius: 0 0 16px 16px;
 
   transition: 300ms ease-out;
   transition-property: box-shadow;
+}
+/* лишаємо 1 елемент */
+@media only screen and (max-width: 767.98px) {
+  .bestsellers-item:nth-last-child(-n + 2) {
+    display: none;
+  }
+}
+@media only screen and (min-width: 768px) {
+  .bestsellers-item {
+    width: calc((100% - 16px * 1) / 2);
+  }
+}
+@media only screen and (min-width: 1168px) {
+  .bestsellers-item {
+    width: calc((100% - 16px * 2) / 3);
+  }
+}
+@media only screen and (max-width: 1167.98px) {
+  .bestsellers-item:nth-last-child(-n + 1) {
+    display: none;
+  }
 }
 .bestsellers-item:hover {
   box-shadow: 0 4px 10px 0 rgba(30, 24, 35, 0.2);
@@ -22,6 +38,7 @@
   overflow: hidden;
 }
 .bestsellers-ill {
+  max-width: 100%;
   border-radius: 16px 16px 0 0;
 }
 .bestsellers-caption {
@@ -36,7 +53,7 @@
   background-color: #fff;
   border: 1px solid rgba(17, 17, 17, 0.1);
   border-top: none;
-  border-radius: 0 0 16px 16px;
+  border-radius: 0 0 15px 15px;
 }
 
 /* Overlay styles */

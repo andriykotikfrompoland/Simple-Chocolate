@@ -34,12 +34,14 @@ address {
 }
 img {
   display: block;
+  max-width: 100%;
+  height: auto;
 }
 
 /* Helper class */
-.hide {
+/* .hide {
   display: none !important;
-}
+} */
 
 /* Base styles */
 .sr-only {
@@ -81,10 +83,10 @@ img {
 }
 @media only screen and (min-width: 768px) {
   .section-title {
+    max-width: 412px;
+    margin: 0 auto 50px;
     font-size: 24px;
     line-height: 1.17;
-    margin: 0 auto 50px;
-    max-width: 412px;
   }
 }
 .accent {
@@ -94,26 +96,25 @@ img {
 .container {
   min-width: 320px;
   max-width: 375px;
-  margin: 0 auto;
   padding: 0 20px;
+  margin: 0 auto;
 
-  outline: 2px solid red;
-  outline-offset: -2px;
+  /* outline: 2px solid red;
+  outline-offset: -2px; */
 }
-
 @media screen and (min-width: 768px) {
   .container {
     max-width: 768px;
     padding: 0 32px;
   }
 }
-
 @media screen and (min-width: 1168px) {
   .container {
     max-width: 1168px;
     padding: 0 16px;
   }
 }
+
 .logo {
   display: inline-flex;
   align-items: center;
@@ -128,10 +129,12 @@ img {
 @media only screen and (min-width: 1168px) {
   .logo {
     gap: 4px;
+
     font-size: 18px;
     line-height: 1.11;
   }
 }
+
 /* Socials */
 .socials {
   display: flex;
